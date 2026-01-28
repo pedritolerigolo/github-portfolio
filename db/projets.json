@@ -47,5 +47,13 @@
     "annee": "2026",
     "image": "P6.png",
     "lien": "https://github.com/pedritolerigolo/Notes-Scrapper-IUT"
+  },
+  {
+    "titre": "Générateur de QR-code",
+    "description": "Application Go minimaliste permettant de générer des QR codes à la volée. Interface web moderne avec dégradés, animations CSS et gestion du serveur HTTP depuis le navigateur. Ouverture automatique du navigateur au lancement et arrêt propre de l'application via l'interface.",
+    "technos": ["Go", "HTML", "CSS", "JavaScript"],
+    "annee": "2026",
+    "image": "P7.png",
+    "lien": "https://github.com/pedritolerigolo/golang-qrcode-generator"
   }
 ]
