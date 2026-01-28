@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RounDnPounD | produit : <?= esc($produit->nom) ?></title>
+
+    <link rel="icon" type="image/png" href="../img/rnp/favicon.png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/rnp/style.css" />
+    <link rel="stylesheet" href="../css/rnp/details.css" />
+    <link rel="stylesheet" href="../css/rnp/footer.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a><img src="../img/rnp/favicon.png" alt="logo" /></a>
+        </div>
+
+        <form action="" method="get" class="search-bar">
+            <input type="text" name="query" id="search-input" placeholder="Rechercher un produit..." />
+            <button type="submit">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </form>
+
+        <nav class="header-buttons">
+            <a class="icon-text">
+                <span class="material-icons">star</span>
+                <span>Favoris</span>
+            </a>
+
+            <a class="icon-text">
+                <span class="material-icons">shopping_cart</span>
+                <span>Panier</span>
+            </a>
+
+            <a class="icon-text">
+                <span class="material-icons">person</span>
+                <span>Connexion</span>
+            </a>
+    </header>
+
+    <div class="product-container" style="user-select: none;">
+        <div class="product-header">
+            <h1>Le Classico</h1>
+            <div class="product-price">8,99 €</div>
+        </div>
+
+        <div class="product-content">
+            <div class="product-image-section">
+                <img src="../img/rnp/1.gif" alt="Le Classico">
+            </div>
+
+            <div class="product-info-section">
+                <div class="info-card">
+                    <h2>Ingrédients</h2>
+                    <ul>
+                        <li>
+                            <strong>Pain de mie</strong>
+                        </li>
+                        <li>
+                            <strong>Bacon</strong>
+                        </li>
+                        <li>
+                            <strong>Salade</strong>
+                            <span style="color: #bb946f; font-weight: bold; margin-left: 5px;">
+                               (×2)
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Tomate</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h2>Description</h2>
+                    <p>Il est très bon et savoureux.</p>
+                </div>
+                <div class="info-card">
+                    <h2>Note :</h2>
+                        <div class="rating">
+                            <span class="star full">★</span>
+                            <span class="star full">★</span>
+                            <span class="star full">★</span>
+                            <span class="star half">★</span>
+                            <span class="star empty">★</span>
+                            <span class="note-value">3,5 / 5</span>
+                        </div>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>Allergènes</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+                    <span
+                        style="background: #fdf2f2; color: #d32f2f; border: 1px solid #d32f2f; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: capitalize; display: flex; align-items: center; gap: 5px;">
+                        <span class="material-icons" style="font-size: 16px;">warning</span>
+                        gluten
+                    </span>
+                </div>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 12px; font-style: italic;">
+                    * Ce produit contient les allergènes listés ci-dessus.
+                </p>
+            </div>
+        </div>
+
+        <div class="product-footer">
+            <div class="wishlist-section" style="margin-top: 20px;">
+                <a class="btn-wishlist">
+                    <span class="material-icons">favorite_border</span>
+                    Ajouter à ma liste de souhaits
+                </a>
+                <a class="btn-add-cart">
+                    <span class="material-icons">shopping_cart</span>
+                    Ajouter au panier
+                </a>
+                <a class="btn-buy-now">
+                    <span class="material-icons">bolt</span>
+                    Achat Immédiat
+                </a>
+            </div>
+            <div class="navigation-footer">
+                <a class="back-link"><span class="material-symbols-outlined"
+                        style="vertical-align: middle;">
+                        arrow_back_2
+                    </span> Retour à la liste des produits</a>
+            </div>
+        </div>
+    </div>
+    <div class="comment-container" style="user-select: none;">
+        <h2 class="section-title">Avis des clients (2)</h2>
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">john</span>
+                            <div class="review-rating">
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>bon, miam</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">paul</span>
+                            <div class="review-rating">
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>pas mal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+        <div class="brand-mark">
+            <img src="../img/rnp/favicon.png" alt="Round & Pound" />
+        </div>
+        <div class="brand-text">
+            <h3>Round & Pound</h3>
+            <p class="brand-slogan">Dès qu'ils cesseront de tourner,<br>vous n'en ferez qu'une bouchée.</p>
+        </div>
+        </div>
+
+        <div class="footer-columns">
+        <div class="footer-col">
+            <h4>Service</h4>
+            <ul>
+            <li><a>Commander</a></li>
+            <li><a>Panier</a></li>
+            <li><a>Liste de souhaits</a></li>
+            <li><a href="<?= base_url('login') ?>">Connectez-vous</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+            <li><a>Notre histoire</a></li>
+            <li><a>Equipe</a></li>
+            <li><a>Mention légale</a></li>
+            <li><a>Allergènes</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+            <li><a>nous contacter par mail</a></li>
+            <li><a>01 23 45 67 89</a></li>
+            <li><a>12 Rue de la Galette, Paris</a></li>
+            <li><a>Revenir à l'accueil</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Réseaux</h4>
+            <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="icon ion-social-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="icon ion-social-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon ion-social-twitter"></i></a>
+            <a href="#" aria-label="Youtube"><i class="icon ion-social-youtube"></i></a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Rounds And Pounds. Tous droits réservés.</p>
+    </div>
+    </footer>
+
+    <script src="../js/rnp/animation.js"></script>
+
+</body>
+
+</html>

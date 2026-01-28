@@ -1,0 +1,51 @@
+[
+  {
+    "titre": "Mod Minecraft",
+    "description": "Un mod minecraft ajoutant une palanquée de fonctionnalités liées au fromage.",
+    "technos": ["java"],
+    "annee": "2017",
+    "image": "P1.jpg",
+    "lien": "https://github.com/pedritolerigolo/minecraft-cheese-mod"
+  },
+  {
+    "titre": "Générateur d'arborscences",
+    "description": "C'est un script qui permet de générer un fichier markdown pour un projet. le fichier affiche l'arborescence des dossiers et fichiers du projet, puis, pour chaque fichier, il donne le path complet et tout le contenu du fichier. Le markdown ainsi généré peut ensuite être utilisé pour documenter le projet ou etre donné à une iag pour qu'elle puisse résoudre des problemes en ayant tout le contexte.",
+    "technos": ["Python"],
+    "annee": "2025",
+    "image": "P2.png",
+    "lien": "https://github.com/pedritolerigolo/generateurMarkdownArborescence"
+  },
+  {
+    "titre": "Candidatures spontanée automatiques",
+    "description": "un système qui envoi automatiquement un courriel à une liste d'entreprise pour postuler en utilisant l'IA pour générer le contenu du mail.",
+    "technos": ["Python", "IA", "API"],
+    "annee": "2025",
+    "image": "P3.png",
+    "lien": "https://github.com/pedritolerigolo/automailing-to-find-a-stage"
+  },
+  {
+    "titre": "RounDnPounD",
+    "description": "Une boutique en ligne en php utilisant le Framework Codigniter4 et l'extension Shield.",
+    "technos": ["HTML", "CSS", "JavaScript", "PHP"],
+    "annee": "2025",
+    "image": "P4.png",
+    "lien": "https://github.com/pedritolerigolo/RounDnPounD",
+    "lien2": "vues/rnp.html"
+  },
+  {
+    "titre": "Mon Portfolio",
+    "description": "Mon site personnel hébergé sur GitHub Pages avec une gestion dynamique via JSON.",
+    "technos": ["HTML", "CSS", "JavaScript", "API"],
+    "annee": "2026",
+    "image": "P5.png",
+    "lien": "https://github.com/pedritolerigolo/github-portfolio"
+  },
+  {
+    "titre": "Récupération de notes IUT",
+    "description": "Un script python utilisant Playwright pour se connecter au portail IUT et extraire automatiquement les notes et le rang dans la promotion.",
+    "technos": ["PYTHON","playwright", "API", "CHROMIUM"],
+    "annee": "2026",
+    "image": "P6.png",
+    "lien": "https://github.com/pedritolerigolo/Notes-Scrapper-IUT"
+  }
+]

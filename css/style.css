@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'Beaufort';
+    src: url('../fonts/BeaufortForLoL-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+:root {
+    --hex-gold: #c4b07b;
+    --hex-blue: #0ac8b9;
+    --hex-dark: #091428;
+    --hex-bg: #0b2023;
+}
+
+body {
+    background-color: var(--hex-bg);
+    color: #f0e6d2;
+    margin: 0;
+    font-family: 'Spiegel', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+.hero-full-screen,
+.container {
+    scroll-snap-align: start;
+}
+
+.hero-full-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(9, 20, 40, 0.7), rgba(9, 20, 40, 0.7)), url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, #091428 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.banner-wrapper {
+    position: absolute;
+    top: -110%;
+    left: -20vw;
+    width: 35vw;
+    min-width: 280px;
+    max-width: 350px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.banner-frame-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 400px;
+}
+
+.profile-frame {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid var(--hex-gold);
+    overflow: hidden;
+    background: #010a13;
+}
+
+.summoner-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-name {
+    margin: 0 0 10px 0;
+    font-family: 'Beaufort', serif;
+    color: #f0e6d2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner-level {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hex-gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hero-text {
+    flex: 1;
+    margin-left: 400px;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-family: 'Beaufort', serif;
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin: 0;
+    line-height: 1;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-stats {
+    margin: 30px 0;
+    font-size: 0.9rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hex-btn {
+    text-decoration: none !important;
+}
+
+.ranks-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.rank-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rank-icon {
+    width: 75px;
+    height: auto;
+    filter: drop-shadow(0 0 8px var(--hex-gold));
+}
+
+.lol-icon {
+    filter: drop-shadow(0 0 8px #ff4655);
+}
+
+.rank-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.rank-label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.rank-tier {
+    font-family: 'Beaufort', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.lp-text {
+    font-size: 1rem;
+    color: var(--hex-gold);
+    vertical-align: middle;
+    margin-left: 5px;
+    opacity: 0.8;
+}
+
+.lol-rank-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.iut-rank-container,
+.lol-rank-container {
+    position: relative;
+    cursor: help;
+}
+
+.rank-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    background: rgba(1, 10, 19, 0.98);
+    border: 1.5px solid var(--hex-gold);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: tooltipFade 0.2s ease-out;
+}
+
+.iut-rank-container:hover .rank-tooltip,
+.lol-rank-container:hover .rank-tooltip {
+    display: block !important;
+}
+
+.rank-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--hex-gold) transparent transparent transparent;
+}
+
+.tooltip-header {
+    font-family: 'Beaufort', serif;
+    color: var(--hex-gold);
+    text-align: center;
+    border-bottom: 1px solid var(--hex-gold);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.tooltip-title {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-family: 'Beaufort', serif;
+    color: var(--hex-gold);
+}
+
+.tooltip-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    font-style: italic;
+    text-align: left;
+}
+
+.tooltip-divider {
+    border: 0;
+    border-top: 1px solid rgba(196, 176, 123, 0.2);
+    margin: 15px 0;
+}
+
+.tooltip-footer {
+    font-size: 0.7rem;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+@keyframes tooltipFade {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.stats-details {
+    border-left: 2px solid rgba(196, 176, 123, 0.3);
+    padding-left: 20px;
+}
+
+.stats-details .stat-item {
+    margin-top: 5px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+}
+
+.stat-moyenne {
+    font-weight: bold;
+}
+
+.stat-sync {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+}

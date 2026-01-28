@@ -1,0 +1,356 @@
+@media (max-width: 768px) {
+    
+    .hero-full-screen {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .banner-wrapper {
+        display: none !important;
+    }
+
+    .hero-text {
+        margin-left: 0 !important;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem !important;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-stats {
+        margin: 20px 0;
+    }
+
+    .ranks-wrapper {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center;
+    }
+
+    .rank-display {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px !important;
+    }
+
+    .rank-icon {
+        width: 60px !important;
+    }
+
+    .rank-tier {
+        font-size: 1.4rem !important;
+    }
+
+    .lp-text {
+        font-size: 0.9rem !important;
+    }
+
+    .lol-rank-container {
+        width: 100%;
+    }
+
+    .rank-tooltip {
+        width: 90vw !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: auto !important;
+        top: 110% !important;
+    }
+
+    .rank-tooltip::after {
+        top: auto;
+        bottom: 100%;
+        border-color: transparent transparent var(--hex-gold) transparent;
+    }
+
+    .stats-details {
+        border-left: none !important;
+        border-top: 2px solid rgba(196, 176, 123, 0.3);
+        padding-left: 0 !important;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .stat-label,
+    .stat-value {
+        font-size: 1rem !important;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-actions a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .container h2 {
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+
+    #liste-projets {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+        gap: 15px;
+    }
+
+    .project-card {
+        aspect-ratio: 1 / 1;
+    }
+
+    .project-title {
+        font-size: 0.8rem !important;
+    }
+
+    .year-text {
+        font-size: 0.65rem !important;
+    }
+
+    .rp-icon {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .lock-diamond {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .lock-img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .modal-content {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 20px auto;
+    }
+
+    #modal-title {
+        font-size: 1.5rem;
+        padding: 15px 15px 0 15px !important;
+    }
+
+    #modal-description {
+        font-size: 0.85rem;
+        padding: 10px 15px !important;
+    }
+
+    .techno-container {
+        padding: 10px 15px !important;
+        gap: 8px !important;
+    }
+
+    .techno-container span {
+        font-size: 0.65rem !important;
+        padding: 3px 6px !important;
+    }
+
+    .modal-footer {
+        padding: 15px !important;
+    }
+
+    #modal-actions {
+        flex-direction: column !important;
+        width: 100%;
+        gap: 8px !important;
+    }
+
+    #modal-actions a {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .modal-close-container {
+        top: 8px !important;
+        right: 8px !important;
+    }
+
+    .hextech-footer {
+        margin-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+    }
+
+    .footer-info h4,
+    .footer-form h4 {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
+
+    .email-link a {
+        font-size: 0.8rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hc-input {
+        font-size: 0.9rem;
+    }
+    
+    .arrow-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: fit-content;
+        transform: scale(0.9);
+    }
+
+    .copyright {
+        font-size: 0.6rem;
+    }
+
+    .mastery-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+        padding: 0 5px;
+    }
+
+    .mastery-card {
+        width: 100% !important;
+    }
+
+    .mastery-circle {
+        width: 60px !important;
+        height: 60px !important;
+        border-width: 2px !important;
+    }
+
+    .mastery-icon {
+        font-size: 1.5rem !important;
+    }
+
+    .mastery-icon-img {
+        width: 30px !important;
+    }
+
+    .mastery-name {
+        font-size: 0.65rem !important;
+        letter-spacing: 1px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+
+    #liste-projets {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    }
+
+    .project-title {
+        font-size: 0.7rem !important;
+    }
+
+    #modal-title {
+        font-size: 1.2rem;
+    }
+
+    .stat-item span {
+        font-size: 0.85rem !important;
+    }
+    .mastery-grid {
+        gap: 10px !important;
+    }
+    
+    .mastery-name {
+        font-size: 0.55rem !important;
+    }
+
+    .mastery-circle {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-full-screen {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-stats > div {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .project-card:active {
+        transform: scale(0.95);
+        transition: transform 0.1s;
+    }
+
+    .button:active,
+    .hex-btn:active,
+    .icon-text:active {
+        transform: scale(0.95);
+        transition: transform 0.1s;
+    }
+
+    .project-card:hover .project-image {
+        transform: none;
+        filter: none;
+    }
+
+    .project-card:hover .view-button {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .rank-tooltip {
+        display: none;
+        pointer-events: auto;
+    }
+
+    .lol-rank-container.tooltip-visible .rank-tooltip {
+        display: block !important;
+    }
+}

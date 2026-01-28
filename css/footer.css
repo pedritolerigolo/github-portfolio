@@ -1,0 +1,72 @@
+.hextech-footer {
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: var(--hex-blue);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--hex-gold);
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 8px var(--hex-gold));
+}
+
+.email-link a {
+    color: var(--hex-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.email-link i {
+    color: var(--hex-gold);
+}
+
+.email-link a:hover {
+    color: var(--hex-gold);
+}
+
+.hc-input {
+    width: 100%;
+    background: rgba(1, 10, 19, 0.8);
+    border: 1px solid #1e2328;
+    color: var(--hex-blue);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Spiegel', sans-serif;
+    outline: none;
+}
+
+.hc-input:focus {
+    border-color:
+        var(--hex-gold);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.65rem;
+    opacity: 0.4;
+    letter-spacing: 1px;
+}

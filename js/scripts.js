@@ -1,80 +1,86 @@
-/*!
-* Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
-*/
-window.addEventListener('DOMContentLoaded', event => {
+let mesProjets = [];
 
-    const sidebarWrapper = document.getElementById('sidebar-wrapper');
-    let scrollToTopVisible = false;
-    // Closes the sidebar menu
-    const menuToggle = document.body.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', event => {
-        event.preventDefault();
-        sidebarWrapper.classList.toggle('active');
-        _toggleMenuIcon();
-        menuToggle.classList.toggle('active');
-    })
+async function chargerProjets() {
+    try {
+        const response = await fetch('db/projets.json');
+        mesProjets = await response.json();
+        const container = document.getElementById('liste-projets');
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
-    scrollTriggerList.map(scrollTrigger => {
-        scrollTrigger.addEventListener('click', () => {
-            sidebarWrapper.classList.remove('active');
-            menuToggle.classList.remove('active');
-            _toggleMenuIcon();
-        })
-    });
+        container.innerHTML = mesProjets.map((p, index) => `
+            <div class="project-card" onclick="openModal(${index})">
+                <div class="image-wrapper">
+                    <img src="img/${p.image}" alt="${p.titre}" class="project-image">
+                </div>
+                
+                <div class="view-button">
+                    <div class="lock-diamond">
+                        <img src="img/lock.png" class="lock-img" alt="Débloquer">
+                    </div>
+                </div> 
 
-    function _toggleMenuIcon() {
-        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
-        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
-        if (menuToggleBars) {
-            menuToggleBars.classList.remove('fa-bars');
-            menuToggleBars.classList.add('fa-xmark');
-        }
-        if (menuToggleTimes) {
-            menuToggleTimes.classList.remove('fa-xmark');
-            menuToggleTimes.classList.add('fa-bars');
-        }
+                <div class="project-info">
+                    <h3 class="project-title">${p.titre}</h3>
+                    <div class="project-footer">
+                        <img src="img/rp.png" class="rp-icon" alt="RP">
+                        <span class="year-text">${p.annee}</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+    } catch (error) {
+        console.error("Erreur de chargement :", error);
+        document.getElementById('liste-projets').innerHTML = "<p class='hc-text-blue'>Erreur lors du chargement des cristaux de données.</p>";
+    }
+}
+
+function openModal(index) {
+    const p = mesProjets[index];
+    const modal = document.getElementById('project-modal');
+    const modalContent = modal.querySelector('.modal-content');
+    
+    document.getElementById('modal-image').src = `img/${p.image}`;
+    document.getElementById('modal-title').innerText = p.titre;
+    document.getElementById('modal-description').innerText = p.description;
+    document.getElementById('modal-year').innerText = p.annee;
+
+    const actionsContainer = document.getElementById('modal-actions');
+    actionsContainer.innerHTML = "";
+
+    const btn1 = document.createElement('a');
+    btn1.href = p.lien;
+    btn1.target = "_blank";
+    btn1.className = "button is-secondary is-tiny";
+    btn1.style.textDecoration = "none";
+    btn1.innerText = "VOIR LE GITHUB";
+    actionsContainer.appendChild(btn1);
+
+    if (p.lien2) {
+        const btn2 = document.createElement('a');
+        btn2.href = p.lien2;
+        btn2.target = "_self";
+        btn2.className = "button is-primary is-tiny";
+        btn2.style.textDecoration = "none";
+        btn2.innerText = "EN VOIR PLUS...";
+        actionsContainer.appendChild(btn2);
     }
 
-    // Scroll to top button appear
-    document.addEventListener('scroll', () => {
-        const scrollToTop = document.body.querySelector('.scroll-to-top');
-        if (document.documentElement.scrollTop > 100) {
-            if (!scrollToTopVisible) {
-                fadeIn(scrollToTop);
-                scrollToTopVisible = true;
-            }
-        } else {
-            if (scrollToTopVisible) {
-                fadeOut(scrollToTop);
-                scrollToTopVisible = false;
-            }
-        }
-    })
-})
+    const techContainer = document.getElementById('modal-technos');
+    techContainer.innerHTML = p.technos.map(t => `<span class="hc-text-gold" style="border:1px solid var(--hex-gold); padding:2px 5px; font-size:0.7rem; margin:2px;">${t}</span>`).join('');
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; 
+    modalContent.classList.add('animated-border');
+}
 
-function fadeOut(el) {
-    el.style.opacity = 1;
-    (function fade() {
-        if ((el.style.opacity -= .1) < 0) {
-            el.style.display = "none";
-        } else {
-            requestAnimationFrame(fade);
-        }
-    })();
-};
+function closeModal() {
+    const modal = document.getElementById('project-modal');
+    const modalContent = modal.querySelector('.modal-content');
 
-function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-    (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += .1) > 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-        }
-    })();
-};
+    modalContent.classList.remove('animated-border');
+
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+chargerProjets();
