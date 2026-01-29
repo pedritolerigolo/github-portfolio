@@ -16,6 +16,14 @@
     "lien": "https://github.com/pedritolerigolo/generateurMarkdownArborescence"
   },
   {
+    "titre": "Serveur Client",
+    "description": "Un serveur et un client écrit en Go qui communiquent via TCP. Le client envoie des commandes au serveur qui les éxécutes.",
+    "technos": ["Go"],
+    "annee": "2025",
+    "image": "P9.png",
+    "lien": "https://github.com/pedritolerigolo/modele-client-serveur"
+  },
+  {
     "titre": "Candidatures spontanée automatiques",
     "description": "un système qui envoi automatiquement un courriel à une liste d'entreprise pour postuler en utilisant l'IA pour générer le contenu du mail.",
     "technos": ["Python", "IA", "API"],
@@ -55,5 +63,13 @@
     "annee": "2026",
     "image": "P7.png",
     "lien": "https://github.com/pedritolerigolo/golang-qrcode-generator"
+  },
+  {
+    "titre": "Boutons à effets",
+    "description": "Une bibliothèque JavaScript légère qui transforme le curseur de l'utilisateur en un aimant incontrôlable, le repoussant ou l'attirant physiquement à l'approche d'un bouton cible.",
+    "technos": ["HTML", "CSS", "JavaScript"],
+    "annee": "2026",
+    "image": "P8.png",
+    "lien": "https://github.com/pedritolerigolo/magic-button"
   }
 ]
