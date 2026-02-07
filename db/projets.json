@@ -71,5 +71,14 @@
     "annee": "2026",
     "image": "P8.png",
     "lien": "https://github.com/pedritolerigolo/magic-button"
+  },
+  {
+    "titre": "filtre pour camera",
+    "description": "Application de vision par ordinateur utilisant MediaPipe pour détecter les gestes de la main et les expressions faciales en temps réel, et afficher différentes images en fonction des détections.",
+    "technos": ["PYTHON", "MediaPipe", "OpenCV"],
+    "annee": "2026",
+    "image": "P10.png",
+    "lien": "https://github.com/pedritolerigolo/D-tection-de-Gestes-et-Expressions-Faciales",
+    "lien2": "vues/cam.html"
   }
 ]

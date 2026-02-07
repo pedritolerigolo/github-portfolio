@@ -47,7 +47,7 @@ async function chargerStatsPromo() {
                     </div>
                 </div>
 
-                <div class="lol-rank-container">
+                <div class="lol-rank-container" style="cursor: help;">
                     <a href="https://mobalytics.gg/lol/profile/euw/gooning2gothmomy-botom/overview" target="_blank" class="lol-rank-link stat-item rank-display">
                         <img src="img/${lolTierIcon}" alt="LoL Rank" class="rank-icon lol-icon">
                         <div class="rank-info">
